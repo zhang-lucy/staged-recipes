@@ -1,0 +1,62 @@
+package:
+  name: plastinet
+  version: "0.1.0"
+
+source:
+  url: https://github.com/izabellaleahz/plastinet/archive/refs/tags/v0.1.0.tar.gz
+  sha256: 24d8dd21e69c8ceeb569f633166c55e4897cac69bc22ddd8d6c66f0d0252613c
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python >=3.8
+    - pip
+  host:
+    - python >=3.8
+    - pip
+  run:
+    - python >=3.8
+    - numpy
+    - pandas
+    - scikit-learn
+    - torchvision
+    - ipykernel
+    - matplotlib
+    - anndata
+    - squidpy
+    # - gudhi
+    - scanpy
+    # - scanpy ==1.9.8
+    - cmcrameri
+    - pip
+
+test:
+  imports:
+    - plastinet
+    - numpy
+    - pandas
+    - scikit-learn
+    - torchvision
+    - scanpy
+    - squidpy
+    # - gudhi
+    - matplotlib
+    - anndata
+
+about:
+  home: https://github.com/izabellaleahz/plastinet
+  license: MIT
+  summary: "A Python package for bioinformatics research using Scanpy and related tools."
+  description: |
+    PlastiNet is a Python package designed for bioinformatics research,
+    leveraging tools like Scanpy, Squidpy, and Torch Geometric for advanced
+    data analysis and visualization.
+  dev_url: https://github.com/izabellaleahz/plastinet/issues
+
+extra:
+  recipe-maintainers:
+    - izabellaleahz
+    - zhang-lucy
