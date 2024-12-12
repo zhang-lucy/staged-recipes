@@ -29,6 +29,8 @@ requirements:
     - scanpy
     - cmcrameri
     - pip
+    - pygam
+    - ipykernel
 
 test:
   imports:
@@ -42,15 +44,13 @@ test:
     - gudhi
     - matplotlib
     - anndata
+    - pygam
 
 about:
   home: https://github.com/izabellaleahz/plastinet
   license: MIT
-  summary: "A Python package for bioinformatics research using Scanpy and related tools."
-  description: |
-    PlastiNet is a Python package designed for bioinformatics research,
-    leveraging tools like Scanpy, Squidpy, and Torch Geometric for advanced
-    data analysis and visualization.
+  summary: "Plastinet is Python package for spatial transcriptomics."
+  description: "PlastiNet is a graph attention-based network (GAT) designed to analyze spatial transcriptomics data and uncover the mechanisms of cellular plasticity in the tumor microenvironment."
   dev_url: https://github.com/izabellaleahz/plastinet/issues
 
 extra:
