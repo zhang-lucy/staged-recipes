@@ -31,7 +31,7 @@ requirements:
     - pip
     - pygam
     - ipykernel
-    - pyg # PyTorch Geometric
+    - pyg
   channels:
     - pyg
     - conda-forge
@@ -39,16 +39,6 @@ test:
   imports:
     - plastinet
     - pyg
-    # - numpy
-    # - pandas
-    # - sklearn
-    # - torchvision
-    # - scanpy
-    # - squidpy
-    # - gudhi
-    # - matplotlib
-    # - anndata
-    # - pygam
 
 about:
   home: https://github.com/izabellaleahz/plastinet
