@@ -8,7 +8,9 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: |
+    {{ PYTHON }} -m pip install . --no-deps -vv
+    {{ PYTHON }} -m pip install torch_geometric
 
 requirements:
   build:
@@ -31,14 +33,11 @@ requirements:
     - pip
     - pygam
     - ipykernel
-    - pyg
   channels:
-    - pyg
     - conda-forge
 test:
   imports:
     - plastinet
-    - pyg
 
 about:
   home: https://github.com/izabellaleahz/plastinet
