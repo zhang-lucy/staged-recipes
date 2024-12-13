@@ -1,10 +1,10 @@
 package:
   name: plastinet
-  version: "v0.1.2"
+  version: "v0.1.4"
 
 source:
-  url: https://github.com/izabellaleahz/plastinet/archive/refs/tags/v0.1.2.tar.gz
-  sha256: 84ee7eac2f4dd5dccb7a2302d4ce590c450d9eac1eb54df65e462f2e47a480f5
+  url: https://github.com/izabellaleahz/plastinet/archive/refs/tags/v0.1.4.tar.gz
+  sha256: 1f7c9d57f5cb40e0c1673aa46ab20fd42fad1543004bdc9ccbe4c3f7e487afa4
 
 build:
   number: 0
@@ -31,20 +31,24 @@ requirements:
     - pip
     - pygam
     - ipykernel
-
+    - pyg # PyTorch Geometric
+  channels:
+    - pyg
+    - conda-forge
 test:
   imports:
     - plastinet
-    - numpy
-    - pandas
-    - scikit-learn
-    - torchvision
-    - scanpy
-    - squidpy
-    - gudhi
-    - matplotlib
-    - anndata
-    - pygam
+    - pyg
+    # - numpy
+    # - pandas
+    # - sklearn
+    # - torchvision
+    # - scanpy
+    # - squidpy
+    # - gudhi
+    # - matplotlib
+    # - anndata
+    # - pygam
 
 about:
   home: https://github.com/izabellaleahz/plastinet
